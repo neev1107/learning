@@ -338,14 +338,13 @@ numbers1 = list(map(int,input().split()))
 print(f"{is_palindrome(numbers1)}")'''
 
 #Two Sum Problem
-nums = list(map(int,input().split()))
+'''nums = list(map(int,input().split()))
 target = int(input())
 def two_sum(nums,target):
     left = 0
     right = len(nums) -1
     while left < right:
        current = nums[left] + nums[right]
-       
        if current == target:
             return [left,right]
        elif current > target:
@@ -353,4 +352,124 @@ def two_sum(nums,target):
        else:
             left+=1  
     return[] 
-two_sum(nums,target)
+two_sum(nums,target)'''
+
+
+'''def remove_duplicate(arr):
+    if not arr:
+        return 0
+    slow = 0
+    for fast in range(1,len(arr)):
+        if arr[fast]!=arr[slow]:
+            slow +=1
+            arr[slow] = arr[fast]
+    return slow + 1
+
+arr = list(map(int,input().split()))
+length = remove_duplicate(arr)
+print(*arr[:length])'''
+
+'''arr1 = list(map(int,input().split()))
+arr2 = list(map(int,input().split()))
+result = []
+i = 0
+j = 0
+while i < len(arr1) and j <= len(arr2):
+    if arr1[i] <= arr2[j]:
+        result.append(arr1[i])
+        i+=1
+    else:
+        result.append(arr2[j])
+        j +=1
+while i < len(arr1):
+        result.append(arr1[i])
+        i += 1
+
+while j < len(arr2):
+        result.append(arr2[j])
+        j += 1
+print(result)'''
+
+
+'''arr = list(map(int,input().split()))
+target = input()
+def reversed_array(arr):
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        arr[left],arr[right] = arr[right],arr[left]
+        left +=1
+        right -=1
+    return arr
+print(*reversed_array(arr))'''
+
+'''times = [int(input()) for _ in range(6)]
+late_entry = int(input())
+print(f"Recorded times: {times}")
+times.sort()
+print(f"Sorted: {times}")
+print(f"Podium: {times[:3]}")
+print(f"fastest: {times[0]}, Slowest: {times[-1]}")
+removed = times.pop(0)
+print(f"Disqualified: {removed}")
+times.append(late_entry)
+print(f"Updated: {times}")
+total = sum(times)
+print(f"total: {total}")
+average = total / len(times)
+print(f"Average is : {average:.2f}")'''
+
+
+'''def reverse(arr,start,end):
+    while start < end:
+        arr[start],arr[end]=arr[end],arr[start]
+        start +=1
+        end -=1
+    return arr
+n, d = map(int,input().split())
+arr = list(map(int,input().split()))
+d = d % n
+reverse(arr,0,d-1)
+reverse(arr,d,n-1)
+reverse(arr,0,n-1)
+print(*arr)'''
+
+'''def reversed_arr(arr):
+    left = 0
+    right = len(arr) -1
+    while left < right:
+        arr[left],arr[right]=arr[right],arr[left]
+        left +=1
+        right -=1
+    return arr
+arr = list(map(int,input().split()))
+length = int(input())
+print(*reversed_arr(arr))'''
+'''[1,2,3,3,4,4,5]'''
+'''[1,2,3,4,5]'''
+'''def remove_duplicate(arr):
+    slow = 0
+
+    for fast in range(1, len(arr)):
+        if arr[slow] != arr[fast]:
+            slow += 1
+            arr[slow] = arr[fast]
+
+    return arr[:slow + 1]
+        
+n=int(input())
+arr=list(map(int,input().split()))
+print(*remove_duplicate(arr))'''
+
+'''def reverseString(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        left, right = 0, len(s) - 1
+        
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left += 1
+            right -= 1'''
+
